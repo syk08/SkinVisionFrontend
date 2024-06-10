@@ -8,7 +8,7 @@ export default function Details() {
 
     useEffect(() => {
        
-        fetch('http://192.168.1.75:8000/users')
+        fetch('http://192.168.0.161:8000/users')
         .then(response => response.json())
         .then(data => {
 
@@ -25,7 +25,7 @@ export default function Details() {
         >
 
 
-<Image source={{ uri: `http://192.168.1.75:8000/images/${item.image_url}` }} style={styles.image} />
+<Image source={{ uri: `http://192.168.0.161:8000/images/${item.image_url}` }} style={styles.image} />
             <Text>
 
             </Text>

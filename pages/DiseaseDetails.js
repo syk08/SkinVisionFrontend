@@ -7,7 +7,7 @@ export default function DiseaseDetails ({ route }) {
     const { disease } = route.params;
     
     return (<View  style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Image source={{uri: `http://192.168.1.75:8000/images/${disease.image_url}`}} style={styles.image}/>
+        <Image source={{uri: `http://192.168.0.161:8000/images/${disease.image_url}`}} style={styles.image}/>
         <Text style={styles.title}> {disease.name} </Text>
         <Text style={styles.bold}> Symptoms <Text>:  {disease.symptom}</Text></Text>
         <Text style={styles.bold}> Remedy <Text>:  {disease.remedy}</Text></Text>

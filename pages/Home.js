@@ -10,10 +10,10 @@ export const ListCustomItemShowcase = ({ navigation }) => {
 
 
   useEffect(function () {
-    fetch('http://192.168.1.75:8000/diseases')
+    fetch('http://192.168.0.161:8000/diseases')
     .then(response => response.json())
     .then(data => {
-
+        console.log(data)
         setDiseases(data)
     });
   }, [])
@@ -24,6 +24,7 @@ export const ListCustomItemShowcase = ({ navigation }) => {
     <View {...headerProps}>
       <Text category='h6'>
         {item.name} 
+        
       </Text>
     </View>
   );
@@ -44,7 +45,7 @@ export const ListCustomItemShowcase = ({ navigation }) => {
       >
         <View style={styles.flexbox}
         >
-          <Image source={{ uri: `http://192.168.1.75:8000/images/${item.image_url}` }} style={styles.image} />
+          <Image source={{ uri: `http://192.168.0.161:8000/images/${item.image_url}` }} style={styles.image} />
 
           <Text style={styles.wrap}>
             { item.symptom }
